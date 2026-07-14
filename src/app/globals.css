@@ -1,10 +1,8 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ============================================================================
+   Custom Theme Tokens (Tailwind v4 syntax)
+   ============================================================================ */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,15 +10,127 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================================================
+   CSS Variables — Dark mode first
+   ============================================================================ */
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+}
+
+/* ============================================================================
+   Global Styles
+   ============================================================================ */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================================
+   Selection Color
+   ============================================================================ */
+::selection {
+  background-color: rgb(99 102 241 / 0.3);
+  color: #fafafa;
+}
+
+/* ============================================================================
+   Custom Scrollbar (Webkit)
+   ============================================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #27272a #09090b;
+}
+
+/* ============================================================================
+   Animations
+   ============================================================================ */
+
+/* Radix Dialog animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes zoomOut {
+  from { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  to { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+}
+
+/* Tailwind v4 animation utilities for Radix */
+@utility animate-in {
+  animation: fadeIn 200ms ease-out;
+}
+
+@utility animate-out {
+  animation: fadeOut 150ms ease-in;
+}
+
+@utility fade-in-0 {
+  --tw-enter-opacity: 0;
+}
+
+@utility fade-out-0 {
+  --tw-exit-opacity: 0;
+}
+
+@utility zoom-in-95 {
+  --tw-enter-scale: 0.95;
+}
+
+@utility zoom-out-95 {
+  --tw-exit-scale: 0.95;
+}
+
+/* Data state selectors for Radix */
+[data-state="open"] {
+  animation: fadeIn 200ms ease-out;
+}
+
+[data-state="closed"] {
+  animation: fadeOut 150ms ease-in;
+}
+
+/* Dialog specific animations */
+[role="dialog"][data-state="open"] {
+  animation: zoomIn 200ms ease-out;
+}
+
+[role="dialog"][data-state="closed"] {
+  animation: zoomOut 150ms ease-in;
 }
