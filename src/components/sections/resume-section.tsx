@@ -9,7 +9,7 @@ const resumes = [
   {
     label: "AI Engineer Resume",
     category: "AI & Applied AI",
-    file: "https://drive.google.com/file/d/1OdxMl-ZFDfv7nVQpzY7DkKSzKQux0xOL/view?usp=sharing",
+    file: "https://drive.google.com/file/d/1VHfySzHMcaSk9uW5aFPYSkJZFC_YruVr/view?usp=sharing",
     color: "from-indigo-500/20 to-violet-500/20",
     hoverBorder: "hover:border-indigo-500/40",
     iconColor: "text-indigo-400",
@@ -17,7 +17,7 @@ const resumes = [
   {
     label: "ML Engineer Resume",
     category: "Machine Learning",
-    file: "https://drive.google.com/file/d/1lSClWbaNeHDzn1oglz9qYuVAckyA8Tjk/view?usp=sharing",
+    file: "https://drive.google.com/file/d/1PhVfN-Z4VpcKUljTxefGPssIxMG4G6Gq/view?usp=sharing",
     color: "from-emerald-500/20 to-teal-500/20",
     hoverBorder: "hover:border-emerald-500/40",
     iconColor: "text-emerald-400",
@@ -25,7 +25,7 @@ const resumes = [
   {
     label: "Data Scientist Resume",
     category: "Data Science",
-    file: "https://drive.google.com/file/d/14flenYfp584CEtpt1GG3-kEFudPS413A/view?usp=sharing",
+    file: "https://drive.google.com/file/d/1bM3Bnvu0xNWOoIfSbzbWfJi-A4FcXK10/view?usp=sharing",
     color: "from-cyan-500/20 to-blue-500/20",
     hoverBorder: "hover:border-cyan-500/40",
     iconColor: "text-cyan-400",
@@ -33,7 +33,7 @@ const resumes = [
   {
     label: "Data Analyst Resume",
     category: "Analytics",
-    file: "https://drive.google.com/file/d/1AcW95NZZ7CSZV5U6G54wvotyRbuoJY6Z/view?usp=sharing",
+    file: "https://drive.google.com/file/d/14iR6Pcd6DE6ct0GOrK4aLJJztjCVuAM9/view?usp=sharing",
     color: "from-amber-500/20 to-orange-500/20",
     hoverBorder: "hover:border-amber-500/40",
     iconColor: "text-amber-400",
@@ -41,7 +41,7 @@ const resumes = [
   {
     label: "Python Developer Resume",
     category: "Python Backend",
-    file: "https://drive.google.com/file/d/1nulE3mZuwiZfEAiDKs3NYuTqr1p0bqa-/view?usp=sharing",
+    file: "https://drive.google.com/file/d/1nFDFGHvo3aMaBCG0_oNernr1tbshh24n/view?usp=sharing",
     color: "from-blue-500/20 to-sky-500/20",
     hoverBorder: "hover:border-blue-500/40",
     iconColor: "text-blue-400",
